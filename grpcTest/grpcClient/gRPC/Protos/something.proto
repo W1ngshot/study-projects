@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "CalculatorClient";
+
+message CalculatorRequest {
+  int32 first = 1;
+  int32 second = 2;
+  string operation = 3;
+}
+
+message CalculatorReply {
+  float result = 1;
+}
+
+service SomethingService {
+  rpc GetUserInfo (CalculatorRequest) returns (CalculatorReply);
+}

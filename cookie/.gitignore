@@ -22,6 +22,7 @@
 **/.idea/**/modules.xml
 
 *.suo
+*.user
 .vs/
 [Bb]in/
 [Oo]bj/
@@ -68,11 +69,3 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
-
-# Images & Music
-**/Files/Images/*
-**/Files/Music/*
-
-**/appsettings.Local.json
-ocelot.json
-**/Docker/**/data

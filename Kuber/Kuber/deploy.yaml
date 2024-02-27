@@ -1,0 +1,23 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubertest-deployment
+  labels:
+    app: kubertest
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kubertest
+  template:
+    metadata:
+      name: kubertest
+      labels:
+        app: kubertest
+    spec:
+      containers:
+        - name: kubertest
+          image: w1ngshot/kubertest:1
+          ports:
+            - containerPort: 80
+      

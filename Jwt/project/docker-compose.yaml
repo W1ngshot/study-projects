@@ -1,0 +1,1 @@
+version: '3.7'services:  backend:    build: ./backend/Jwt    ports:      - "5000:80"    depends_on:      - db  db:    image: postgres    environment:      POSTGRES_PASSWORD: 123456      POSTGRES_DB: jwt    ports:      - "6667:5432"  frontend:    build: ./frontend    ports:      - "3000:80"

@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Ajbolit76",
+  "classifications": [
+    "Cloud",
+    "Service",
+    "Web"
+  ],
+  "name": "Шаблон комманды",
+  "description": "Шаблон комманды",
+  "groupIdentity": "Ajb.Query",
+  
+  "identity": "Ajb.CQRS.Query",
+  "shortName": "Ajb.Query",
+  "defaultName": "C",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "QueryName",
+  "preferNameDirectory": true,
+  "guids": [
+    "113f2d04-69f0-40c3-8797-ba3f356dd812"
+  ],
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            ".idea/**",
+            ".vscode/**",
+            ".vs/**",
+            ".DS_Store/**",
+            "**/.idea/**",
+            "**/.vscode/**",
+            "**/.vs/**",
+            "**/.DS_Store/**",
+            ".git"
+          ]
+        },
+        {
+          "condition": "(!rest)",
+          "exclude": [
+            "QueryNameEndpoint.cs"
+          ]
+        }
+      ]
+    }
+  ],
+  "symbols": {
+    "DefaultNamespace": {
+      "type": "bind",
+      "binding": "msbuild:RootNamespace",
+      "replaces": "NamespaceWillBeInserted",
+      "defaultValue": "TestNamespace"
+    },
+    "rest": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Добавить REST endpoint",
+      "defaultValue": "true"
+    }
+  }
+}
